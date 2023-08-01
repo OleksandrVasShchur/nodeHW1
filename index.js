@@ -9,9 +9,6 @@ const callAction = async ({action, id, name, email, phone }) => {
             return;
         case "get":
             const contact = await operations.getContactById(id);
-            if(!contact) {
-                throw new Error(`Contact with id=${id} not found`);
-            }
             console.log(contact);
             return;
         case "add":
